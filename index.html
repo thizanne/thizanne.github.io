@@ -1,26 +1,290 @@
-<!DOCTYPE html>
-<html>
-  <title>Thibault Suzanne</title>
-  <meta charset="utf-8">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="assets/foundation-icons/foundation-icons.css" />
+    <title>Thibault Suzanne</title>
+  </head>
+
   <body>
 
-    <h1>Thibault Suzanne</h1>
-    Doctorant
-    <p>
-      <address>
-	Équipe Antique<br>
-	DI - École Normale Supérieure <br>
-	45, rue d'Ulm <br>
-	75230 Paris Cedex 05 - France
-      </address>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Thibault Suzanne</h1>
+      </div>
+    </div>
 
-      <blockquote>
-	<address>
-	  <b>e-mail:</b> [prenom.nom]@ens.fr <br>
-	</address>
-      </blockquote>
-      <hr>
+    <div class="row">
 
+      <div class="large-9 columns callout">
+        <p>
+          I am currently a third year PhD Student in
+          the <a href="http://www.di.ens.fr/AntiqueTeam.html.fr">Antique</a>
+          team at the École Normale Supérieure in Paris. I also spend
+          time in
+          the <a href="https://www.lip6.fr/recherche/team.php?id=750">APR</a>
+          team of the Université Pierre et Marie Curie.
+        </p>
+
+        <p>
+          My advisor
+          is <a href="https://www-apr.lip6.fr/~mine/index.html.en">Antoine
+            Miné</a> and my topic is abstract interpretation under
+          relaxed memory models.
+        </p>
+
+        <h5>Scientific interests</h5>
+
+        <p>
+          My main research interest is the use of formal methods to
+          ensure the security, safety and correctness of
+          programs. I am particularly interested in static analysis by
+          the means of abstract interpretation of programs to
+          automatically and soundly ensure properties of programs such
+          as the absence of some classes of errors.
+        </p>
+
+        <p>
+          I am also occasionnally interested in strong and expressive
+          type systems and programming languages that use them,
+          programming language implementation, and binary code
+          analysis.
+        </p>
+
+        <hr />
+
+        <h5>Publication</h5>
+        <ul>
+          <li>
+            <h6><a href="http://link.springer.com/chapter/10.1007/978-3-662-53413-7_23">From
+                Array Domains to Abstract Interpretation under
+                Store-Buffer-Based Memory Models.</a> </h6>
+            <h6>Thibault Suzanne and Antoine Miné. <i>SAS 2016.</i></h6>
+
+            <p>
+              <strong>Abstract.</strong> We address the problem of
+              verifying concurrent programs under store-buffer-based
+              weakly consistent memory models, such as TSO or
+              PSO. Using the abstract interpretation framework, we
+              adapt existing domains for arrays to model store buffers
+              and obtain a sound abstraction of program states
+              (including the case of programs with infinite state
+              space) parameterised by a numerical domain. Whereas the
+              usual method for this kind of programs implements
+              a program transformation to come back to an analysis
+              under a sequentially consistent model, the novelty of
+              our work consists in applying abstract interpretation
+              directly on the source program, setting a clean
+              foundation for special dedicated domains keeping
+              information difficult to express with program
+              transformations. We demonstrate the precision of this
+              method on a few examples, targetting the TSO model and
+              incidentally being also sound for PSO due to some
+              specific abstraction choice. We discuss an application
+              to fence removal and show that our implementation is
+              usually able to remove as many or more fences, with
+              respect to the state of the art, on concurrent
+              algorithms designed for sequential consistency while
+              still remaining precise enough to verify them.
+            </p>
+
+              <div class="row publication-logos">
+
+                <div class="small-4 columns">
+                  <a href="papers/from_array_domains.pdf">
+                    <i class="fi-page-pdf"></i>
+                  </a>
+                </div>
+
+                <div class="small-4 columns">
+                  <a href="papers/from_array_domains_slides.pdf">
+                    <i class="fi-projection-screen"></i>
+                  </a>
+                </div>
+
+                <div class="small-4 columns">
+                  <a href="https://hal.inria.fr/hal-01360566">
+                    <img src="assets/logo_hal_tampon_RVB.jpg" alt="HAL" />
+                  </a>
+                </div>
+
+              </div>
+
+          </li>
+        </ul>
+
+        <hr />
+
+        <h5>Programming</h5>
+
+        <p>
+          Here is some software I maintain or contributed to.
+        </p>
+
+        <dl>
+          <dt><a href="https://github.com/thizanne/cormoran">Cormoran</a></dt>
+          <dd>
+            <p>
+              An experimental static analyser for concurrent programs
+              within relaxed memory models.
+            </p>
+          </dd>
+
+          <dt><a href="https://github.com/thizanne/ocaml-hamt">OCamlHamt</a></dt>
+          <dd>
+            <p>
+              A <a href="http://lampwww.epfl.ch/papers/idealhashtrees.pdf">Hash
+                Array Mapped Trie</a> library I implemented for OCaml
+              during my internship in the Gallium Inria team. I also
+              wrote
+              a <a href="http://gallium.inria.fr/blog/implementing-hamt-for-ocaml/">blog
+                entry</a> about it.
+            </p>
+          </dd>
+
+          <dt><a href="http://ocamlgraph.lri.fr/">OCamlgraph</a></dt>
+          <dd>
+            <p>
+              A graph library for OCaml. I implemented the
+              WeakTopological and ChaoticIteration modules for fixpoint
+              computation using widening.
+            </p>
+          </dd>
+
+          <dt><a href="http://hevea.inria.fr/">H<FONT SIZE=2><sup>E</sup></FONT>V<FONT SIZE=2><sup>E</sup></FONT>A</a></dt>
+
+          <dd>
+            <p>
+              A LaTeX to HTML translator. During my internship in the
+              Gallium team,
+              I <a href="http://gallium.inria.fr/blog/hevea-a-new-rope/">reworked
+                the output module</a> with ropes and authored the HTML5
+              generator.
+            </p>
+          </dd>
+
+        </dl>
+
+        <hr />
+
+        <h5>Teaching</h5>
+
+        <p>
+          I have been a teaching assistant in the following courses.
+        </p>
+
+        <dl>
+          <dt>2016–2017</dt>
+          <dd>
+            <ul>
+              <li>
+                Introduction à la Programmation, L1. Université Paris Diderot.
+              </li>
+              <li>
+                Langages et Automates, L2. Université Paris Diderot.
+              </li>
+            </ul>
+          </dd>
+
+          <dt>2015–2016</dt>
+          <dd>
+            <ul>
+              <li>
+                Éléments d'Algorithmique, L2. Université Paris Diderot.
+              </li>
+              <li>
+                Introduction à la Programmtion, L1 CPEI. Université Paris Diderot.
+              </li>
+            </ul>
+          </dd>
+
+          <dt>2014–2015</dt>
+          <dd>
+            <ul>
+              <li>
+                Introduction à la Programmation, L1. Université Paris Diderot.
+              </li>
+            </ul>
+          </dd>
+
+        </dl>
+
+        <hr />
+
+        <h5 id="contact">Contact</h5>
+
+        <p>
+          Feel free to send me an email to my personal address
+          <samp>
+            <script type="text/javascript" language="javascript">
+              var s = 'moc.liamg@ennazus.iht'; var e =
+              s.split("").reverse().join("");
+              document.write('<a href="mailto:'+e+'">'+e+'</a>');
+          </script></samp>.
+          <noscript><samp>thi dot suzanne at gmail</samp>.</noscript>
+
+          I also currently use the address
+          <samp>
+            <script type="text/javascript" language="javascript">
+              var s = 'rf.sne@ennazus.tluabiht'; var e =
+              s.split("").reverse().join("");
+              document.write('<a href="mailto:'+e+'">'+e+'</a>');
+          </script></samp>
+          <noscript><samp>thibault dot suzanne at ens dot
+              fr</samp></noscript> but it will become inactive at some
+          point.
+        </p>
+
+        <address>
+          Équipe Antique<br />
+          DI - École Normale Supérieure <br />
+          45, rue d'Ulm <br />
+          75230 Paris Cedex 05 <br />
+          France
+        </address>
+      </div>
+
+      <div class="large-2 columns">
+        <img src="assets/photo.jpg" alt="Ma photo" class="photo frame_10" max-width="50px"/>
+
+        <div id="social_bar" class="row small-up-3">
+
+          <div class="column">
+            <a href="https://github.com/thizanne" aria-label="Email">
+              <script type="text/javascript" language="javascript">
+                var s = 'moc.liamg@ennazus.iht';
+                var e = s.split("").reverse().join("");
+                document.write('<a href="mailto:'+e+'">');
+              </script>
+              <noscript><a aria-label="Contact" href="#contact"></noscript>
+              <i class="fi-mail"></i>
+              </a>
+          </div>
+
+          <div class="column">
+            <a href="https://github.com/thizanne" aria-label="GitHub"
+              <i class="fi-social-github"></i>
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="https://www.linkedin.com/in/thibault-suzanne-6a7b8860" aria-label="LinkedIn">
+              <i class="fi-social-linkedin"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
-
